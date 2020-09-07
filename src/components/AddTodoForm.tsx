@@ -20,7 +20,7 @@ const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
   };
 
   return (
-    <form>
+    <form autoComplete='off'>
       <TextField
         id='standard-basic'
         label='To-do item...'
