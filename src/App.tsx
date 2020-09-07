@@ -1,6 +1,12 @@
 import React from 'react';
 import { Button, Grid } from '@material-ui/core';
 import Header from './components/Header';
+import TodoListItem from './components/TodoListItem';
+
+const todos: Array<Todo> = [
+  { text: 'Nail TS', complete: false },
+  { text: 'Manage time', complete: true },
+];
 
 function App() {
   return (
@@ -12,7 +18,7 @@ function App() {
         <Grid item container>
           <Grid item xs={false} sm={2} />
           <Grid item xs={10} sm={8}>
-            <h1>hello Typescript!</h1>
+            <TodoListItem todo={todos[0]} />
             <Button variant='contained' color='primary'>
               Click me here!
             </Button>
