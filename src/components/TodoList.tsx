@@ -12,7 +12,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo }) => {
     <ul>
       {todos.map(todo => {
         return (
-          <TodoListItem key={uuidv4} todo={todo} toggleTodo={toggleTodo} />
+          <TodoListItem key={uuidv4()} todo={todo} toggleTodo={toggleTodo} />
         );
       })}
     </ul>

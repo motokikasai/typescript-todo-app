@@ -19,7 +19,7 @@ const Header = () => {
       <AppBar position='static'>
         <Toolbar>
           <Typography className={classes.typographyStyles}>
-            This is our header
+            Typescript To-do App
           </Typography>
           <a
             href='https://github.com/motokikasai/typescript-todo-app'

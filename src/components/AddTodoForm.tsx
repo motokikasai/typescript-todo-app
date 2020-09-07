@@ -1,4 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
+// import {createStyles, makeStyles, Theme} from '@material-ui/styles'
+import { TextField, Button } from '@material-ui/core';
 
 interface AddTodoFormProps {
   addTodo: AddTodo;
@@ -19,10 +21,20 @@ const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
 
   return (
     <form>
-      <input type='text' value={newTodo} onChange={handleChange} />
-      <button type='submit' onClick={handleSubmit}>
-        Add todo
-      </button>
+      <TextField
+        id='standard-basic'
+        label='To-do item...'
+        value={newTodo}
+        onChange={handleChange}
+      />
+      <Button
+        type='submit'
+        onClick={handleSubmit}
+        variant='contained'
+        color='primary'
+      >
+        Add item
+      </Button>
     </form>
   );
 };

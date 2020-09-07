@@ -1,3 +1,30 @@
+body {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+li {
+  padding: 10px;
+}
+
+input[type='checkbox' i] {
+  margin-right: 10px;
+}
+
+form {
+  display: flex;
+  margin: 0 20px;
+}
+
+.MuiButton-containedPrimary {
+  margin-left: 20px;
+}
+
 .complete {
   text-decoration: line-through;
 }
