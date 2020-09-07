@@ -1,14 +1,16 @@
-import React from 'react';
-import { Button } from '@material-ui/core';
+import React, { useState, ChangeEvent } from 'react';
 
 const AddTodoForm = () => {
+  const [newTodo, setNewTodo] = useState('');
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setNewTodo(e.target.value);
+  };
+
   return (
     <form>
-      <input type='text' />
-      {/* <button type='submit'>Add todo</button> */}
-      <Button variant='contained' color='primary'>
-        Add todo
-      </Button>
+      <input type='text' value={newTodo} onChange={handleChange} />
+      <button type='submit'>Add todo</button>
     </form>
   );
 };
