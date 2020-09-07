@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Grid } from '@material-ui/core';
 import Header from './components/Header';
 import TodoList from './components/TodoList';
+import AddTodoFrom from './components/AddTodoForm';
 
 const initialTodos: Array<Todo> = [
   { text: 'Nail TS', complete: true },
@@ -34,9 +35,7 @@ const App: React.FC = () => {
           <Grid item xs={false} sm={2} />
           <Grid item xs={10} sm={8}>
             <TodoList todos={todos} toggleTodo={toggleTodo} />
-            <Button variant='contained' color='primary'>
-              Click me here!
-            </Button>
+            <AddTodoFrom />
           </Grid>
           <Grid item xs={false} sm={2} />
         </Grid>
