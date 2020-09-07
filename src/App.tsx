@@ -25,6 +25,11 @@ const App: React.FC = () => {
     setTodos(newTodos);
   };
 
+  const addTodo: AddTodo = newTodo => {
+    newTodo.trim() !== '' &&
+      setTodos([...todos, { text: newTodo, complete: false }]);
+  };
+
   return (
     <div className='App'>
       <Grid container direction='column'>
@@ -35,7 +40,7 @@ const App: React.FC = () => {
           <Grid item xs={false} sm={2} />
           <Grid item xs={10} sm={8}>
             <TodoList todos={todos} toggleTodo={toggleTodo} />
-            <AddTodoFrom />
+            <AddTodoFrom addTodo={addTodo} />
           </Grid>
           <Grid item xs={false} sm={2} />
         </Grid>
