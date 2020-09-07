@@ -10,14 +10,14 @@ function App() {
           <Header />
         </Grid>
         <Grid item container>
-          <Grid item xs={1} sm={2} />
+          <Grid item xs={false} sm={2} />
           <Grid item xs={10} sm={8}>
             <h1>hello Typescript!</h1>
             <Button variant='contained' color='primary'>
               Click me here!
             </Button>
           </Grid>
-          <Grid item xs={1} sm={2} />
+          <Grid item xs={false} sm={2} />
         </Grid>
       </Grid>
     </div>
